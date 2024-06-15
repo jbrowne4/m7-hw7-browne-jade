@@ -109,14 +109,14 @@
     margin-bottom: 48px;
   }
 
- article p::first-letter:first-of-type {
+ p:first-of-type:first-letter {
     color:#13251b;
     font-size: 200%;
     padding-right: 8px;
 
     float: left;
     line-height: 0.7;
-}    
+}   
   
   main > article img {
     float: left;

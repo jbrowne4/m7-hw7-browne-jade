@@ -109,14 +109,12 @@
     margin-bottom: 48px;
   }
 
- p:first-of-type:first-letter {
-    color:#13251b;
-    font-size: 200%;
-    padding-right: 8px;
-
+  main article p:first-of-type::first-letter {
     float: left;
-    line-height: 0.7;
-}   
+    font-size: 4em; 
+    line-height: 0.8;
+    padding-right: 8px; 
+  }
   
   main > article img {
     float: left;
@@ -148,18 +146,38 @@
   span.tooltip:focus {
     text-decoration: underline;
   }
+
   /* show tooltip on hover/focus */
   span.tooltip:hover > span,
   span.tooltip:focus > span {
-    display: inline;
+    display: block;
+    visibility: visible;
   }
   
   /* styling for tooltip bubble */
   span.tooltip span {
-    display: none;
+    visibility: hidden;
+    width: 200px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+    bottom: 120%;
+    left: 50%;
+    margin-left: -60px;
   }
   
   /* styling for tooltip bubble arrow */
   span.tooltip span::after {
     content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
   }
